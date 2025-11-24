@@ -80,6 +80,9 @@ function handleDragOver(e) {
 
 function handleDragEnter(e) {
     console.log("Drag enter of", e.currentTarget);
+    ui.slots.forEach(function (slot) {
+        slot.classList.add("active");
+    })
 }
 
 function handleDragLeave(e) {
